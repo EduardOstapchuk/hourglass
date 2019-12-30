@@ -50,16 +50,77 @@ body {
   border-right: 80px solid transparent;
   border-bottom: 130px solid #1d2c83;
   border-radius: 10px;
-  animation: spin 1.25s infinite linear;
+  animation: spin 4s infinite ease-in-out;
+  z-index: 1;
 }
 @keyframes spin {
-  0% {
+  40% {
     transform: rotate(0deg);
   }
-  20% {
-    transform: rotate(10deg);
+  50% {
+    transform: rotate(180deg);
+  }
+  90% {
+    transform: rotate(180deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
+  }
+}
+.top {
+  z-index: 4;
+  position: absolute;
+  top: -161px;
+  left: 24px;
+  border-top: 118px solid #fff;
+  border-right: 73px solid transparent;
+  border-left: 73px solid transparent;
+  height: 0px;
+  width: 1px;
+  transform-origin: 50% 100%;
+  transform: scaleY(50%);
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: top;
+  animation-timing-function: linear;
+  animation-timing-function: inherit;
+}
+@keyframes top {
+  50% {
+    transform: scale(-1);
+  }
+  90% {
+    transform: scale(-1);
+  }
+  100% {
+    transform: scale(-1);
+  }
+}
+.bottom {
+  z-index: 4;
+  position: absolute;
+  bottom: -40px;
+  left: 24px;
+  border-right: 73px solid transparent;
+  border-bottom: 118px solid #fff;
+  border-left: 73px solid transparent;
+  height: 0px;
+  width: 1px;
+  transform: scale(0);
+  transform-origin: 50% 100%;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: bottom;
+  animation-timing-function: linear;
+}
+@keyframes bottom {
+  50% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
   }
 }
